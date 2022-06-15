@@ -6,49 +6,83 @@ class Home extends CI_Controller {
 	public function __construct()
 	{
 			parent::__construct();
-			// $this->load->model('M_walas');
+			$this->load->model('M_home');
 	}
 
 	public function index()
 	{
-
+		$this->load->view('header');
     $this->load->view('home');
+		$this->load->view('footer');
   }
 
-	// public function siswa_lihat($id_siswa)
-	// {
-	// 	// $ses_id_kelas = $this->session->userdata('ses_id_kelas');
-	// 	$data['tampil'] = $this->M_walas->siswa_lihat($id_siswa);
-  //
-	// 	$this->load->view('template/header-walas');
-  //   $this->load->view('walas/siswa_lihat',$data);
-	// 	$this->load->view('template/footer-admin');
-  // }
-  //
-	// public function semester_1($id_siswa)
-	// {
-	// 	$ses_id_kelas = $this->session->userdata('ses_id_kelas');
-	// 	$data['tampil'] = $this->M_walas->semester_1($id_siswa, $ses_id_kelas);
-	// 	$data['tampil_siswa'] = $this->M_walas->siswa_lihat($id_siswa);
-  //
-  //
-	// 	$this->load->view('template/header-walas');
-	// 	$this->load->view('walas/semester_1', $data);
-	// 	$this->load->view('template/footer-admin');
-	// }
-  //
-	// public function semester_1_up()
-	// {
-	// 	$id_siswa = $this->input->post('id_siswa');
-  //
-  //
-	// 	$data_tambah = array(
-	// 		'nama_guru' => $nama_guru,
-	// 		'username' => $username,
-	// 		'id_kelas' => $id_kelas,
-	// 		'password' => sha1($password)
-	// 	);
-	// }
+	public function daftar_tpm()
+	{
+		$this->load->view('header');
+    $this->load->view('daftar-tpm');
+		$this->load->view('footer');
+  }
+
+	public function daftar_siswa_up()
+	{
+		$kompetensi_1 = $this->input->post('kompetensi_1');
+		$kompetensi_2 = $this->input->post('kompetensi_2');
+		$nama_siswa = $this->input->post('nama_siswa');
+		$nisn_siswa = $this->input->post('nisn_siswa');
+		$asal_sekolah = $this->input->post('asal_sekolah');
+		$nik_siswa = $this->input->post('nik_siswa');
+		$tgl_lahir = $this->input->post('tgl_lahir');
+		$alamat = $this->input->post('alamat');
+		$no_hp = $this->input->post('no_hp');
+
+		$cek_nisn = $this->M_home->val_nisn($nisn_siswa);
+
+		foreach ($cek_nisn as $row)
+		{
+			$cek_nisn_val = $row->nisn_siswa;
+		}
+
+		if ($cek_nisn_val) {
+			echo "maaf data anda sudah terdaftar";
+			exit;
+		}
+
+		$data_tambah = array(
+			'kompetensi_1' => $kompetensi_1,
+			'kompetensi_2' => $kompetensi_2,
+			'nama_siswa' => $nama_siswa,
+			'nisn_siswa' => $nisn_siswa,
+			'asal_sekolah' => $asal_sekolah,
+			'nik_siswa' => $nik_siswa,
+			'tgl_lahir' => $tgl_lahir,
+			'alamat' => $alamat,
+			'no_hp' => $no_hp,
+			'status' => 'Terdaftar'
+		);
+
+		$this->M_home->daftar_siswa_up($data_tambah);
+
+		$this->session->set_flashdata('msg', '
+						<div class="alert alert-info alert-dismissible fade show" role="alert">
+							<strong>Pendaftaran siswa berhasil</strong>
+						</div>');
+		redirect ('Home/jumlah_pendaftar');
+	}
+
+	public function jumlah_pendaftar()
+	{
+			$data['tampil'] = $this->M_home->jumlah_pendaftar();
+
+			$this->load->view('header');
+			$this->load->view('jumlah_pendaftar', $data);
+			$this->load->view('footer');
+	}
+
+	public function daftar()
+	{
+    $this->load->view('daftar');
+  }
+
 
 
 }

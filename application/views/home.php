@@ -16,13 +16,7 @@
         <link href="<?= base_url() ?>assets/landingpage/css/styles.css" rel="stylesheet" />
     </head>
     <body>
-        <!-- Navigation-->
-        <nav class="navbar navbar-light bg-light static-top">
-            <div class="container">
-                <a class="navbar-brand" href="#!">PPDB SMK Negeri 1 Ciruas</a>
-                <a class="btn btn-primary" href="#signup">Daftar</a>
-            </div>
-        </nav>
+
         <!-- Masthead-->
         <header class="masthead">
             <div class="container position-relative">
@@ -103,47 +97,61 @@
             </div>
         </section>
 
+        <div class="container">
+
+          <h4 align="center" style="margin: 50px">Halaman Pendaftaran</h4>
+          <table class="table table-bordered" style="margin-bottom: 30px">
+            <tr>
+              <th><center>No</th>
+              <th><center>Nama Kompetensi Keahlian</th>
+              <th><center>Pilihan</th>
+            </tr>
+            <tr>
+              <td><center>1</td>
+              <td>Teknik Pemesinan</td>
+              <td><center>
+                <a class="btn btn-success btn-sm" href="<?= base_url() ?>home/daftar_tpm">Daftar</a>
+              </td>
+            </tr>
+            <tr>
+              <td><center>2</td>
+              <td>Teknik Kendaraan Ringan Otomotif</td>
+              <td><center>
+                <a class="btn btn-success btn-sm" href="#">Daftar</a>
+              </td>
+            </tr>
+            <tr>
+              <td><center>3</td>
+              <td>Teknik Instalasi Listrik</td>
+              <td><center>
+                <a class="btn btn-success btn-sm" href="#">Daftar</a>
+              </td>
+            </tr>
+            <tr>
+              <td><center>4</td>
+              <td>Teknik Grafika</td>
+              <td><center>
+                <a class="btn btn-success btn-sm" href="#">Daftar</a>
+              </td>
+            </tr>
+            <tr>
+              <td><center>5</td>
+              <td>Akuntansi Keuangan Lembaga</td>
+              <td><center>
+                <a class="btn btn-success btn-sm" href="#">Daftar</a>
+              </td>
+            </tr>
+            <tr>
+              <td><center>6</td>
+              <td>Otomatisasi Tata Kelola Perkantoran</td>
+              <td><center>
+                <a class="btn btn-success btn-sm" href="#">Daftar</a>
+              </td>
+            </tr>
+          </table>
+
+        </div>
+
+
 
         <!-- Footer-->
-        <footer class="footer bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
-                        <!-- <ul class="list-inline mb-2">
-                            <li class="list-inline-item"><a href="#!">About</a></li>
-                            <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href="#!">Contact</a></li>
-                            <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href="#!">Terms of Use</a></li>
-                            <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href="#!">Privacy Policy</a></li>
-                        </ul> -->
-                        <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2022. All Rights Reserved.</p>
-                    </div>
-                    <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
-                        <ul class="list-inline mb-0">
-                            <li class="list-inline-item me-4">
-                                <a href="#!"><i class="bi-facebook fs-3"></i></a>
-                            </li>
-                            <li class="list-inline-item me-4">
-                                <a href="#!"><i class="bi-twitter fs-3"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#!"><i class="bi-instagram fs-3"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="<?= base_url() ?>assets/landingpage/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="<?= base_url() ?>assets/landingpage/js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="<?= base_url() ?>assets/landingpage/sb-forms-latest.js"></script>
-    </body>
-</html>
