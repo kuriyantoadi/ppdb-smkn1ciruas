@@ -28,6 +28,7 @@
                               Pendaftaran Peserta Didik Baru
                             </h3>
                             <h1>SMK Negeri 1 Ciruas</h1>
+                            <a class="btn btn-primary btn-lg" href="<?= base_url() ?>Home/daftar_ppdb">Daftar PPDB</a>
 
 
                         </div>
@@ -99,8 +100,8 @@
 
         <div class="container">
 
-          <h4 align="center" style="margin: 50px">Halaman Pendaftaran</h4>
-          <table class="table table-bordered" style="margin-bottom: 30px">
+          <!-- <h4 align="center" style="margin: 50px">Halaman Pendaftaran</h4> -->
+          <!-- <table class="table table-bordered" style="margin-bottom: 30px">
             <tr>
               <th><center>No</th>
               <th><center>Nama Kompetensi Keahlian</th>
@@ -148,7 +149,7 @@
                 <a class="btn btn-success btn-sm" href="#">Daftar</a>
               </td>
             </tr>
-          </table>
+          </table> -->
 
         </div>
 

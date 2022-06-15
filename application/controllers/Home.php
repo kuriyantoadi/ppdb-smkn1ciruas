@@ -16,10 +16,10 @@ class Home extends CI_Controller {
 		$this->load->view('footer');
   }
 
-	public function daftar_tpm()
+	public function daftar_ppdb()
 	{
 		$this->load->view('header');
-    $this->load->view('daftar-tpm');
+    $this->load->view('daftar_ppdb');
 		$this->load->view('footer');
   }
 
