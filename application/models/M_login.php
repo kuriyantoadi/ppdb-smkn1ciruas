@@ -8,8 +8,8 @@ class M_login extends CI_Model{
     return $login;
   }
 
-  function login_admin($username, $password){
-    $login = $this->db->query("SELECT * from tb_admin where username='$username' AND password=sha1('$password') ");
+  function login_operator($username, $password){
+    $login = $this->db->query("SELECT * from tb_operator where username='$username' AND password=sha1('$password') ");
     return $login;
   }
 
