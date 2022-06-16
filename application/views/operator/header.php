@@ -34,7 +34,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Left navbar links -->
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a href="C_operator/daftar_siswa" class="nav-link">Daftar Siswa</a>
+            <a href="<?= base_url() ?>C_operator/daftar_siswa" class="nav-link">Daftar Siswa</a>
           </li>
           <li class="nav-item">
             <a href="C_login/logout_operator" class="nav-link">Logout</a>

@@ -2,6 +2,13 @@
 
 class M_operator extends CI_Model{
 
+  function daftar_siswa(){
+    $this->db->select('*');
+    $this->db->from('tb_siswa');
+    $query = $this->db->get()->result();
+    return $query;
+  }
+
   function siswa_edit($id_siswa){
     $this->db->select('*');
     $this->db->from('tb_siswa');
@@ -37,14 +44,7 @@ class M_operator extends CI_Model{
     return $query;
   }
 
-  function dashboard($ses_id){
-    $this->db->select('*');
-    $this->db->from('tb_siswa');
-    $this->db->join('tb_kelas','tb_siswa.id_kelas = tb_kelas.id_kelas');
-    $this->db->where('tb_siswa.id_siswa',$ses_id);
-    $query = $this->db->get()->result();
-    return $query;
-  }
+
 
   function dashboard_x_akl($ses_id){
     $this->db->select('*');
