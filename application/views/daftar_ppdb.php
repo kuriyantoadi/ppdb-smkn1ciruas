@@ -7,7 +7,9 @@
               <h5 class="card-title">Halaman Pendaftaran Peserta Didik Baru</h5>
             </div>
 
-            <?= form_open('Home/daftar_siswa_up'); ?>
+            <!-- <?=
+            form_open('Home/daftar_siswa_up');
+            ?> -->
               <div class="card-body">
                 <div class="form-group mt-3">
                   <label for="exampleInputEmail1">Kompetensi Keahlian Pilihan 1</label>
@@ -76,7 +78,7 @@
               <!-- /.card-body -->
 
               <div class="card-footer"><center>
-                <input class="btn btn-primary btn-sm" type="submit" name="" value="submit">
+                <!-- <input class="btn btn-primary btn-sm" type="submit" name="" value="submit"> -->
               </div>
               <?= form_close(); ?>
           </div>
