@@ -83,6 +83,22 @@ class Home extends CI_Controller {
     $this->load->view('daftar');
   }
 
+  public function data_diterima()
+  {
+		$data['tampil'] = $this->M_home->data_diterima();
+
+		$this->load->view('header');
+		$this->load->view('data_diterima', $data);
+		$this->load->view('footer');
+  }
+
+  public function data_diterima_detail($id_lulus){
+		$data['tampil'] = $this->M_home->data_diterima_detail($id_lulus);
+
+		$this->load->view('header');
+		$this->load->view('data_diterima_detail', $data);
+		$this->load->view('footer');
+  }
 
 
 }

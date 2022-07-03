@@ -29,8 +29,6 @@
         <div class="container">
             <a class="navbar-brand" href="https://smkn1ciruas.sch.id/">PPDB SMK Negeri 1 Ciruas</a>
             <!-- <a class="btn btn-primary btn-sm" href="<?= base_url() ?>Home/jumlah_pendaftar">Jumlah Pendaftar</a> -->
-            <a class="btn btn-primary btn-sm" href="<?= base_url() ?>Home/data_diterima">Siswa Diterima</a>
-
         </div>
     </nav>
     <!-- Masthead-->

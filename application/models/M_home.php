@@ -12,6 +12,12 @@ class M_home extends CI_Model{
     return $tampil;
   }
 
+  function data_diterima()
+  {
+    $tampil = $this->db->get('tb_lulus')->result();
+    return $tampil;
+  }
+
   function val_nisn($nisn_siswa){
     $this->db->select('*');
     $this->db->from('tb_siswa');
@@ -23,6 +29,15 @@ class M_home extends CI_Model{
   //   $tampil = $this->db->get('tb_kelas')->result();
   //   return $tampil;
   // }
+
+  function data_diterima_detail($id_lulus)
+  {
+    $this->db->select('*');
+    $this->db->from('tb_lulus');
+    $this->db->where('tb_lulus.id_lulus', $id_lulus);
+    $query = $this->db->get()->result();
+    return $query;
+  }
 
 }
 
